@@ -1,0 +1,168 @@
+/*!
+ * Start Bootstrap - Full Width Pics HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+ 
+@import url(http://fonts.googleapis.com/css?family=Cantarell:400,400italic|Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
+body {
+    margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    font-family: 'PT Sans', sans-serif;
+}
+
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#orangeit{
+
+}
+
+.image-bg-fluid-height {
+background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    /* bottom, image */
+    url('../img/bird.png')repeat center center scroll;
+    text-align: center;
+    padding: 100px 0;
+    height: 450px;
+}
+
+.image-bg-fixed-height {
+	background: url('../img/In_the_Hall.png') no-repeat center center scroll;
+    height: px;
+}
+
+.image-bg-fixed-height-beta {
+	background: url('../img/inthehall.') no-repeat center center scroll;
+    height: 150px;
+}
+
+.image-bg-fixed-height-gamma {
+	background: url('../img/In_the_Hall.png') no-repeat center center scroll;
+    height: 150px;
+}
+
+.img-center {
+	margin: 0 auto;
+	max-height: 300px;
+}
+
+section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    margin: 30px 0;
+    font-size: 4em;
+}
+
+.section-lead {
+    margin: 30px 0;
+}
+
+.section-paragraph {
+    margin: 30px 0;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+@media(max-width:768px) {
+    section {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .section-heading {
+        font-size: 2em;
+    }
+}
+
+/*fivera rotate*/
+#img {
+  -webkit-transition: all 0.8s ease;
+     -moz-transition: all 0.8s ease;
+       -o-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+}
+ 
+#img:hover {
+  
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#blur {
+  -webkit-transition: all 0.8s ease;
+     -moz-transition: all 0.8s ease;
+       -o-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+}
+ 
+#blur:hover {
+  
+  -webkit-filter: blur(5px);
+}
+
+#dark {
+  -webkit-transition: all 0.8s ease;
+     -moz-transition: all 0.8s ease;
+       -o-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+}
+ 
+#dark:hover {
+    -webkit-filter: brightness(25%);
+}
+
+
+.ui-dialog-osx {
+    -moz-border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px; border-width: 0 8px 8px 8px;
+}
+
+.smallIcon{
+    margin-top:-5px;
+    max-height:30px;
+}
+
+.featurette-divider {
+    margin: 80px 0;
+}
+
+.featurette {
+    overflow: hidden;
+}
+
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+
+.featurette-heading {
+    font-size: 50px;
+}
+

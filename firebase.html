@@ -1,0 +1,120 @@
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jonathon Cronin">
+
+    <title>Rebirth Armitage Studios</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/move.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</HEAD>
+<script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
+
+
+
+<body onload="letsgo();">
+    	   <div class="container">
+
+        <!-- Team Members Row -->
+        <div class="row" id="code">
+            <div class="col-lg-12">
+                <h2 class="page-header" id="pghead"></h2>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center fb" id="golang0" src="" alt="">
+                <h3 id="head0">Golang
+                    <small>Go Programming</small>
+                </h3>
+                <p>Providing web server, applications and stand alone solutions!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center fb" id="golang1" src="img\wordpress.png" alt="">
+                <h3 id="head1">Wordpress
+                    <small>Self Managed</small>
+                </h3>
+                <p>Control your content and update schedule and your online presence!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center fb" id="golang2" src="img\jquery.png" alt="">
+                <h3 id="head2">JQuery & AJAX
+                    <small>Interactive</small>
+                </h3>
+                <p>bringing interactive and dynamic web content alive with modern solutions!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center fb" id="golang3" src="img\node.png" alt="">
+                <h3 id="head3">Node.js
+                    <small>Expand</small>
+                </h3>
+                <p>Creating applications from webpages using extended libraries!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" id="golang4" src="img\python.png" alt="">
+                <h3 id="head4">Python
+                    <small>Modern Scripting</small>
+                </h3>
+                <p>roviding modern and effective plugins to standing applications!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" id="golang5" src="img\ruby.png" alt="">
+                <h3 id="head5">Ruby & PHP
+                    <small>Rails or Not</small>
+                </h3>
+                <p>Quick and simple online dynamic web deployment and simple upkeep.</p>
+            </div>
+        </div>
+</body>
+
+<script>
+
+function letsgo(){
+
+var myFirebaseRef = new Firebase("https://radiant-inferno-9198.firebaseio.com/web/data");
+
+myFirebaseRef.set({
+  title: "Hello World!",
+  author: "Firebase",
+  location: {
+    city: "Cedar Rapids",
+    state: "California",
+    zip: 94103
+  }
+});
+
+myFirebaseRef.child("location/city").on("value", function(snapshot) {
+  //document.writeln(snapshot.val());
+  var a = document.getElementById("pghead");
+  a.innerHTML = snapshot.val();
+});
+
+var myFirebaseRef = new Firebase("https://radiant-inferno-9198.firebaseio.com/wmj/jcronin");
+var i = 0;
+myFirebaseRef.on("child_added", function(snapshot) {
+  //document.writeln(window.atob(snapshot.val()));
+  var z = snapshot.val();
+  var x = z.Name;
+  var y = x.split(" ");
+    myFirebaseRef.child(x + "/Photo").on("value", function(snap){
+        var b = document.getElementById("golang" + i.toString());
+        var c = snap.val();
+        b.src = "data:image/png;base64," + c;
+        b.style.height = 200;
+        b.style.width = 200;
+  });
+    i++;
+});
+}
+
+
+</script>
+
+</HTML>
