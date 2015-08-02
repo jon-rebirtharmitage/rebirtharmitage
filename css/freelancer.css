@@ -17,7 +17,7 @@ p.small {
 }
 
 @font-face {
-  font-family: 'MyWebFont';
+  font-family: 'Aileons';
   src: url('webfont.eot'); /* IE9 Compat Modes */
   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
 }
@@ -38,7 +38,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Aileons;
     font-weight: 700;
 }
 
