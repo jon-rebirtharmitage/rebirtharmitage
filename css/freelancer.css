@@ -465,3 +465,16 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+.headerbg{background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    /* bottom, image */
+    url('../img/bird.png')repeat center center scroll;
+    text-align: center;
+    padding: 100px 0;
+    height: 350px;
+}
