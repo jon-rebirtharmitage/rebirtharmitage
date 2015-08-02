@@ -6,6 +6,7 @@
 
 body {
     overflow-x: hidden;
+    font-family:Aileons;
 }
 
 p {
@@ -104,7 +105,7 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Aileons;
     font-size: 2em;
     font-weight: 700;
 }
@@ -155,7 +156,7 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Aileons;
     font-weight: 700;
 }
 
@@ -216,6 +217,7 @@ section.success a.active {
 
 #portfolio .portfolio-item .portfolio-link {
     display: block;
+    font-family:Aileons;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
