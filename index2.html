@@ -50,6 +50,9 @@
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
+                    <li class="page-scroll">
+                        <a href="#instafeed">Instagram</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -77,28 +80,27 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Portfolio</h2>
-                    <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
                 <div class="img-circle col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="#portfolioModal1" class="" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/go.png" class="img-circle img-responsive" alt="">
+                        <img src="img/go.png" id="img" class="img-circle img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="#portfolioModal2" class="" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/jquery.png" class="img-circle img-responsive" alt="">
+                        <img src="img/jquery.png" id="img" class="img-circle img-responsive" alt="">
                     </a>
                 </div>
                 <div class="img-circle col-sm-4 portfolio-item">
@@ -108,7 +110,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/por3.png" class="img-responsive" alt="">
+                        <img src="img/por3.png" class="img-circle img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -118,7 +120,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
+                        <img src="img/por2.png" class="img-circle img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -128,7 +130,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+                        <img src="img/por5.png" class="img-circle img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -138,7 +140,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                        <img src="img/bird.png" class="img-circle img-responsive" alt="">
                     </a>
                 </div>
             </div>
@@ -146,12 +148,11 @@
     </section>
 
     <!-- About Section -->
-    <section class="success" id="about">
+    <section class="success secondbg" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>About</h2>
-                    <hr class="star-light">
                 </div>
             </div>
             <div class="row">
@@ -160,11 +161,6 @@
                 </div>
                 <div class="col-lg-4">
                     <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download Theme
-                    </a>
                 </div>
             </div>
         </div>
@@ -220,6 +216,34 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section>
+        <div class="container">
+            <div>
+                <div class="container">
+                    <div class="row" id="instafeed">
+                        <div class="col-lg-12 text-center">
+                            <span class="">Instagram</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <script src="js/instagram.js"></script>
+                    <script type="text/javascript">
+                        var feed = new Instafeed({
+                          get: 'user',
+                          userId: 1621059736,
+                          limit:24,
+                          accessToken: '1621059736.7595eec.8318822b554a4b55899e72788d89ff20',
+                          template: '<div class="col-lg-2 col-sm-6 text-center" id=""><a href="{{link}}"/><img class="img-circle img-responsive img-center" id="blur" src="{{image}}" alt=""><h3>{{title}}<small></small></h3></div>'
+                        });
+                        feed.run();
+                    </script>
+                    </div>
                 </div>
             </div>
         </div>

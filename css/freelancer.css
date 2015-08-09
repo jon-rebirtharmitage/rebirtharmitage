@@ -149,11 +149,11 @@ section {
 section h2 {
     margin: 0;
     font-size: 3em;
+    color:white;
 }
 
 section.success {
-    color: #fff;
-    background: #18bc9c;
+
 }
 
 section.success a,
@@ -202,6 +202,49 @@ section.success a.active {
 #portfolio .portfolio-item .portfolio-link .caption:hover {
     opacity: 1;
 }
+
+#img {
+  -webkit-transition: all 0.8s ease;
+     -moz-transition: all 0.8s ease;
+       -o-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+}
+ 
+#img:hover {
+  
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#blur {
+  -webkit-transition: all 0.8s ease;
+     -moz-transition: all 0.8s ease;
+       -o-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+}
+ 
+#blur:hover {
+  
+  -webkit-filter: blur(5px);
+}
+
+#dark {
+  -webkit-transition: all 0.8s ease;
+     -moz-transition: all 0.8s ease;
+       -o-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+}
+ 
+#dark:hover {
+    -webkit-filter: brightness(25%);
+}
+
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
@@ -455,4 +498,19 @@ footer .footer-below {
     color:#FFCC76;
     font-size:1.5em;
     font-weight:700;
+}
+
+.secondbg{background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(255, 102, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* bottom, image */
+    url('../img/me.png')repeat center center scroll;
+    text-align: center;
+    background-attachment:fixed;
+    padding: -250px;
+    height: 400px;
+    width:100%;
 }
