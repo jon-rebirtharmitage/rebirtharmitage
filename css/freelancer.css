@@ -4,6 +4,8 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
 body {
     overflow-x: hidden;
     font-family:Aileons;
@@ -23,6 +25,7 @@ p.small {
   src: url('../fonts/Ailerons.woff'); /* IE9 Compat Modes */
   src: url('../fonts/Ailerons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
 }
+
 
 a,
 a:hover,
@@ -67,12 +70,24 @@ header img {
 }
 
 header .intro-text .name {
-    padding-top:200px;
+    padding-top:125px;
     text-transform: uppercase;
     font-family: Aileons;
     font-size: 3em;
     font-weight: 100;
     color:white;
+}
+
+.pothead{
+    font-size:2em;
+}
+
+.portrow{
+    margin-top:20px;
+}
+
+.portwor{
+    margin-bottom:20px;
 }
 
 .sh1{
@@ -82,6 +97,39 @@ header .intro-text .name {
     font-weight:700;
 }
 
+.headerbg{background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 125, 255, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* bottom, image */
+    url('../img/bird.png')repeat center center scroll;
+    text-align: center;
+    background-attachment:fixed;
+    height: 300px;
+    width:100%;
+}
+
+.sucsec{
+    font-size:1.5em;
+    font-weight:100;
+    color:white;
+}
+
+.staff{
+    clip:rect(100px,100px,100px,100px);
+}
+
+.smi{
+    margin-top:-8px;
+    height:80%;
+    width:80%x;
+}
+
+.sh{
+    color:#FFCC76;
+}
 
 @media(min-width:768px) {
     header .container {
@@ -101,7 +149,8 @@ header .intro-text .name {
         display: block;
         text-transform: uppercase;
         font-family: Aileons;
-        font-size: 6em;
+        font-size: 4em;
+        margin-top:-150px;
         font-weight: 100;
         color:white;
     }
@@ -112,6 +161,20 @@ header .intro-text .name {
         margin-top:0px;
         font-weight:700;
     }
+    
+    .headerbg{background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 125, 255, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* bottom, image */
+    url('../img/bird.png')repeat center center scroll;
+    text-align: center;
+    background-attachment:fixed;
+    height: 400px;
+    width:100%;
+}
 
 }
 
@@ -511,19 +574,7 @@ footer .footer-below {
     opacity: 0;
 }
 
-.headerbg{background:
-    /* top, transparent black, faked with gradient */ 
-    linear-gradient(
-      rgba(0, 125, 255, 0.6), 
-      rgba(0, 0, 0, 0.6)
-    ),
-    /* bottom, image */
-    url('../img/bird.png')repeat center center scroll;
-    text-align: center;
-    background-attachment:fixed;
-    height: 400px;
-    width:100%;
-}
+
 
 .headerimg{
     max-height:65px;
