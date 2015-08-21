@@ -1,0 +1,348 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', 'install', 'mongo-restful' ]
+info using npm@1.1.4
+info using node@v0.6.12
+verbose config file /root/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose caching /home/jcronin/rebirtharmitage/node_modules/corsify/package.json
+verbose cache add [ 'mongo-restful', null ]
+silly cache add: name, spec, args [ undefined, 'mongo-restful', [ 'mongo-restful', null ] ]
+verbose parsed url { pathname: 'mongo-restful',
+verbose parsed url   path: 'mongo-restful',
+verbose parsed url   href: 'mongo-restful' }
+verbose addNamed [ 'mongo-restful', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'mongo-restful', '', false ]
+verbose raw, before any munging mongo-restful
+verbose url resolving [ 'http://registry.npmjs.org/', './mongo-restful' ]
+verbose url resolved http://registry.npmjs.org/mongo-restful
+verbose etag "4DNBY75L1WWIOCTQKZ28W95MT"
+http GET http://registry.npmjs.org/mongo-restful
+http 304 http://registry.npmjs.org/mongo-restful
+silly get cb [ 304,
+silly get cb   { date: 'Sun, 16 Aug 2015 16:30:11 GMT',
+silly get cb     via: '1.1 varnish',
+silly get cb     'cache-control': 'max-age=60',
+silly get cb     etag: '"4DNBY75L1WWIOCTQKZ28W95MT"',
+silly get cb     age: '0',
+silly get cb     connection: 'keep-alive',
+silly get cb     'x-served-by': 'cache-ord1723-ORD',
+silly get cb     'x-cache': 'MISS',
+silly get cb     'x-cache-hits': '0',
+silly get cb     'x-timer': 'S1439742611.861411,VS0,VE261',
+silly get cb     vary: 'Accept' } ]
+verbose etag mongo-restful from cache
+silly name, range, hasData 2 [ 'mongo-restful', '', true ]
+silly versions [ 'mongo-restful', [ '1.0.0', '1.1.0' ] ]
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-2.6.32-042stab108.8',
+verbose bin dist   { shasum: '5c46d922b19997e50051549c99a52f68b73277fb',
+verbose bin dist     tarball: 'http://registry.npmjs.org/mongo-restful/-/mongo-restful-1.1.0.tgz' } ]
+verbose caching /root/.npm/mongo-restful/1.1.0/package/package.json
+verbose loadDefaults mongo-restful@1.1.0
+silly resolved [ { name: 'mongo-restful',
+silly resolved     version: '1.1.0',
+silly resolved     description: 'A very simple MongoDB RESTful proxy',
+silly resolved     main: 'index.js',
+silly resolved     scripts: { test: 'node test.js' },
+silly resolved     bin: { 'mongo-restful': './bin/mongo-restful.js' },
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/watson/mongo-restful.git' },
+silly resolved     author: { name: 'Thomas Watson Steen', email: 'w@tson.dk' },
+silly resolved     license: 'MIT',
+silly resolved     bugs: { url: 'https://github.com/watson/mongo-restful/issues' },
+silly resolved     homepage: 'https://github.com/watson/mongo-restful',
+silly resolved     dependencies: 
+silly resolved      { JSONStream: '^0.9.0',
+silly resolved        corsify: '^1.0.2',
+silly resolved        json2mongo: '^1.0.1',
+silly resolved        minimist: '^1.1.0',
+silly resolved        mongojs: '^0.13.1',
+silly resolved        pump: '^0.3.5',
+silly resolved        root: '^1.0.0' },
+silly resolved     devDependencies: { tape: '^2.14.0' },
+silly resolved     _id: 'mongo-restful@1.1.0',
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.12',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'mongo-restful' } ]
+info into /home/jcronin/rebirtharmitage mongo-restful@1.1.0
+info installOne mongo-restful@1.1.0
+verbose from cache /root/.npm/mongo-restful/1.1.0/package/package.json
+info unbuild /home/jcronin/rebirtharmitage/node_modules/mongo-restful
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm'
+verbose mkdir done: /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm 755
+verbose unpack_ uid, gid [ 0, 0 ]
+verbose unpackTarget /home/jcronin/rebirtharmitage/node_modules/mongo-restful
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/package.json
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/LICENSE
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/.npmignore
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/test.js
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/.travis.yml
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/README.md
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/index.js
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/bin
+silly asyncMap in gTP /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package/bin/mongo-restful.js
+verbose gunzed /home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package
+verbose rm'ed /home/jcronin/rebirtharmitage/node_modules/mongo-restful
+verbose renamed [ '/home/jcronin/rebirtharmitage/node_modules/___mongo-restful.npm/package',
+verbose renamed   '/home/jcronin/rebirtharmitage/node_modules/mongo-restful' ]
+verbose caching /home/jcronin/rebirtharmitage/node_modules/mongo-restful/package.json
+verbose loadDefaults mongo-restful@1.1.0
+info preinstall mongo-restful@1.1.0
+verbose from cache /home/jcronin/rebirtharmitage/node_modules/mongo-restful/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /home/jcronin/rebirtharmitage/node_modules/mongo-restful/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'JSONStream@^0.9.0', null ]
+silly cache add: name, spec, args [ undefined, 'JSONStream@^0.9.0', [ 'JSONStream@^0.9.0', null ] ]
+verbose parsed url { pathname: 'JSONStream@^0.9.0',
+verbose parsed url   path: 'JSONStream@^0.9.0',
+verbose parsed url   href: 'JSONStream@^0.9.0' }
+silly cache add: name, spec, args [ 'JSONStream', '^0.9.0', [ 'JSONStream', '^0.9.0' ] ]
+verbose parsed url { pathname: '^0.9.0', path: '^0.9.0', href: '^0.9.0' }
+verbose addNamed [ 'JSONStream', '^0.9.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'JSONStream', '^0.9.0' ]
+verbose cache add [ 'corsify@^1.0.2', null ]
+silly cache add: name, spec, args [ undefined, 'corsify@^1.0.2', [ 'corsify@^1.0.2', null ] ]
+verbose parsed url { pathname: 'corsify@^1.0.2',
+verbose parsed url   path: 'corsify@^1.0.2',
+verbose parsed url   href: 'corsify@^1.0.2' }
+silly cache add: name, spec, args [ 'corsify', '^1.0.2', [ 'corsify', '^1.0.2' ] ]
+verbose parsed url { pathname: '^1.0.2', path: '^1.0.2', href: '^1.0.2' }
+verbose addNamed [ 'corsify', '^1.0.2' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'corsify', '^1.0.2' ]
+verbose cache add [ 'json2mongo@^1.0.1', null ]
+silly cache add: name, spec, args [ undefined, 'json2mongo@^1.0.1', [ 'json2mongo@^1.0.1', null ] ]
+verbose parsed url { pathname: 'json2mongo@^1.0.1',
+verbose parsed url   path: 'json2mongo@^1.0.1',
+verbose parsed url   href: 'json2mongo@^1.0.1' }
+silly cache add: name, spec, args [ 'json2mongo', '^1.0.1', [ 'json2mongo', '^1.0.1' ] ]
+verbose parsed url { pathname: '^1.0.1', path: '^1.0.1', href: '^1.0.1' }
+verbose addNamed [ 'json2mongo', '^1.0.1' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'json2mongo', '^1.0.1' ]
+verbose cache add [ 'minimist@^1.1.0', null ]
+silly cache add: name, spec, args [ undefined, 'minimist@^1.1.0', [ 'minimist@^1.1.0', null ] ]
+verbose parsed url { pathname: 'minimist@^1.1.0',
+verbose parsed url   path: 'minimist@^1.1.0',
+verbose parsed url   href: 'minimist@^1.1.0' }
+silly cache add: name, spec, args [ 'minimist', '^1.1.0', [ 'minimist', '^1.1.0' ] ]
+verbose parsed url { pathname: '^1.1.0', path: '^1.1.0', href: '^1.1.0' }
+verbose addNamed [ 'minimist', '^1.1.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'minimist', '^1.1.0' ]
+verbose cache add [ 'mongojs@^0.13.1', null ]
+silly cache add: name, spec, args [ undefined, 'mongojs@^0.13.1', [ 'mongojs@^0.13.1', null ] ]
+verbose parsed url { pathname: 'mongojs@^0.13.1',
+verbose parsed url   path: 'mongojs@^0.13.1',
+verbose parsed url   href: 'mongojs@^0.13.1' }
+silly cache add: name, spec, args [ 'mongojs', '^0.13.1', [ 'mongojs', '^0.13.1' ] ]
+verbose parsed url { pathname: '^0.13.1', path: '^0.13.1', href: '^0.13.1' }
+verbose addNamed [ 'mongojs', '^0.13.1' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'mongojs', '^0.13.1' ]
+verbose cache add [ 'pump@^0.3.5', null ]
+silly cache add: name, spec, args [ undefined, 'pump@^0.3.5', [ 'pump@^0.3.5', null ] ]
+verbose parsed url { pathname: 'pump@^0.3.5',
+verbose parsed url   path: 'pump@^0.3.5',
+verbose parsed url   href: 'pump@^0.3.5' }
+silly cache add: name, spec, args [ 'pump', '^0.3.5', [ 'pump', '^0.3.5' ] ]
+verbose parsed url { pathname: '^0.3.5', path: '^0.3.5', href: '^0.3.5' }
+verbose addNamed [ 'pump', '^0.3.5' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'pump', '^0.3.5' ]
+verbose cache add [ 'root@^1.0.0', null ]
+silly cache add: name, spec, args [ undefined, 'root@^1.0.0', [ 'root@^1.0.0', null ] ]
+verbose parsed url { pathname: 'root@^1.0.0',
+verbose parsed url   path: 'root@^1.0.0',
+verbose parsed url   href: 'root@^1.0.0' }
+silly cache add: name, spec, args [ 'root', '^1.0.0', [ 'root', '^1.0.0' ] ]
+verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+verbose addNamed [ 'root', '^1.0.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'root', '^1.0.0' ]
+verbose raw, before any munging corsify
+verbose url resolving [ 'http://registry.npmjs.org/', './corsify' ]
+verbose url resolved http://registry.npmjs.org/corsify
+verbose etag "CS0ELJH83XRIOX7NCS377YN4M"
+http GET http://registry.npmjs.org/corsify
+verbose raw, before any munging mongojs
+verbose url resolving [ 'http://registry.npmjs.org/', './mongojs' ]
+verbose url resolved http://registry.npmjs.org/mongojs
+http GET http://registry.npmjs.org/mongojs
+verbose raw, before any munging root
+verbose url resolving [ 'http://registry.npmjs.org/', './root' ]
+verbose url resolved http://registry.npmjs.org/root
+http GET http://registry.npmjs.org/root
+verbose raw, before any munging json2mongo
+verbose url resolving [ 'http://registry.npmjs.org/', './json2mongo' ]
+verbose url resolved http://registry.npmjs.org/json2mongo
+verbose etag "AYX6G2T6GLQV59GE4ZWLJ0SLI"
+http GET http://registry.npmjs.org/json2mongo
+verbose raw, before any munging minimist
+verbose url resolving [ 'http://registry.npmjs.org/', './minimist' ]
+verbose url resolved http://registry.npmjs.org/minimist
+verbose etag "B32IAQDF8VUDQW9K08O8JE4J5"
+http GET http://registry.npmjs.org/minimist
+verbose raw, before any munging JSONStream
+verbose url resolving [ 'http://registry.npmjs.org/', './JSONStream' ]
+verbose url resolved http://registry.npmjs.org/JSONStream
+verbose etag "4NTFEJM14NF0EJ0G0HZG487ET"
+http GET http://registry.npmjs.org/JSONStream
+verbose raw, before any munging pump
+verbose url resolving [ 'http://registry.npmjs.org/', './pump' ]
+verbose url resolved http://registry.npmjs.org/pump
+verbose etag "AX87NBDG9Q26VAXD48U1BKDCW"
+http GET http://registry.npmjs.org/pump
+http 304 http://registry.npmjs.org/corsify
+silly get cb [ 304,
+silly get cb   { date: 'Sun, 16 Aug 2015 16:30:12 GMT',
+silly get cb     via: '1.1 varnish',
+silly get cb     'cache-control': 'max-age=60',
+silly get cb     etag: '"CS0ELJH83XRIOX7NCS377YN4M"',
+silly get cb     age: '12',
+silly get cb     connection: 'keep-alive',
+silly get cb     'x-served-by': 'cache-ord1733-ORD',
+silly get cb     'x-cache': 'HIT',
+silly get cb     'x-cache-hits': '1',
+silly get cb     'x-timer': 'S1439742612.242681,VS0,VE0',
+silly get cb     vary: 'Accept' } ]
+verbose etag corsify from cache
+verbose about to build /home/jcronin/rebirtharmitage/node_modules/mongo-restful
+ERR! error installing mongo-restful@1.1.0
+info unbuild /home/jcronin/rebirtharmitage/node_modules/mongo-restful
+verbose from cache /home/jcronin/rebirtharmitage/node_modules/mongo-restful/package.json
+info preuninstall mongo-restful@1.1.0
+info uninstall mongo-restful@1.1.0
+verbose unbuild mongo-restful@1.1.0 [ true,
+verbose unbuild mongo-restful@1.1.0   '/home/jcronin/rebirtharmitage/node_modules',
+verbose unbuild mongo-restful@1.1.0   '/home/jcronin/rebirtharmitage/node_modules' ]
+verbose binRoot [ '/home/jcronin/rebirtharmitage/node_modules/.bin',
+verbose binRoot   { 'mongo-restful': './bin/mongo-restful.js' } ]
+http 304 http://registry.npmjs.org/minimist
+silly get cb [ 304,
+silly get cb   { date: 'Sun, 16 Aug 2015 16:30:12 GMT',
+silly get cb     via: '1.1 varnish',
+silly get cb     'cache-control': 'max-age=60',
+silly get cb     etag: '"B32IAQDF8VUDQW9K08O8JE4J5"',
+silly get cb     age: '47',
+silly get cb     connection: 'keep-alive',
+silly get cb     'x-served-by': 'cache-ord1724-ORD',
+silly get cb     'x-cache': 'HIT',
+silly get cb     'x-cache-hits': '1',
+silly get cb     'x-timer': 'S1439742612.246223,VS0,VE0',
+silly get cb     vary: 'Accept' } ]
+verbose etag minimist from cache
+info postuninstall mongo-restful@1.1.0
+http 304 http://registry.npmjs.org/JSONStream
+silly get cb [ 304,
+silly get cb   { date: 'Sun, 16 Aug 2015 16:30:12 GMT',
+silly get cb     via: '1.1 varnish',
+silly get cb     'cache-control': 'max-age=60',
+silly get cb     etag: '"4NTFEJM14NF0EJ0G0HZG487ET"',
+silly get cb     age: '7',
+silly get cb     connection: 'keep-alive',
+silly get cb     'x-served-by': 'cache-ord1733-ORD',
+silly get cb     'x-cache': 'HIT',
+silly get cb     'x-cache-hits': '1',
+silly get cb     'x-timer': 'S1439742612.269196,VS0,VE0',
+silly get cb     vary: 'Accept' } ]
+verbose etag JSONStream from cache
+http 304 http://registry.npmjs.org/pump
+silly get cb [ 304,
+silly get cb   { date: 'Sun, 16 Aug 2015 16:30:12 GMT',
+silly get cb     via: '1.1 varnish',
+silly get cb     'cache-control': 'max-age=60',
+silly get cb     etag: '"AX87NBDG9Q26VAXD48U1BKDCW"',
+silly get cb     age: '53',
+silly get cb     connection: 'keep-alive',
+silly get cb     'x-served-by': 'cache-ord1724-ORD',
+silly get cb     'x-cache': 'HIT',
+silly get cb     'x-cache-hits': '1',
+silly get cb     'x-timer': 'S1439742612.278205,VS0,VE0',
+silly get cb     vary: 'Accept' } ]
+verbose etag pump from cache
+http 200 http://registry.npmjs.org/mongojs
+silly get cb [ 200,
+silly get cb   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+silly get cb     etag: '"4100TX28POQP04C34UHW4GAV7"',
+silly get cb     'content-type': 'application/json',
+silly get cb     'cache-control': 'max-age=60',
+silly get cb     'content-length': '122936',
+silly get cb     'accept-ranges': 'bytes',
+silly get cb     date: 'Sun, 16 Aug 2015 16:30:12 GMT',
+silly get cb     via: '1.1 varnish',
+silly get cb     age: '0',
+silly get cb     connection: 'keep-alive',
+silly get cb     'x-served-by': 'cache-ord1721-ORD',
+silly get cb     'x-cache': 'HIT',
+silly get cb     'x-cache-hits': '1',
+silly get cb     'x-timer': 'S1439742612.245298,VS0,VE37',
+silly get cb     vary: 'Accept' } ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/root/.npm/mongojs'
+verbose mkdir done: /root/.npm/mongojs 755
+http 200 http://registry.npmjs.org/root
+silly get cb [ 200,
+silly get cb   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+silly get cb     etag: '"BXUKHTUB4E3NV5B827QD7KYB7"',
+silly get cb     'content-type': 'application/json',
+silly get cb     'cache-control': 'max-age=60',
+silly get cb     'content-length': '65253',
+silly get cb     'accept-ranges': 'bytes',
+silly get cb     date: 'Sun, 16 Aug 2015 16:30:12 GMT',
+silly get cb     via: '1.1 varnish',
+silly get cb     age: '0',
+silly get cb     connection: 'keep-alive',
+silly get cb     'x-served-by': 'cache-ord1727-ORD',
+silly get cb     'x-cache': 'MISS',
+silly get cb     'x-cache-hits': '0',
+silly get cb     'x-timer': 'S1439742612.245474,VS0,VE186',
+silly get cb     vary: 'Accept' } ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/root/.npm/root'
+verbose mkdir done: /root/.npm/root 755
+http 304 http://registry.npmjs.org/json2mongo
+silly get cb [ 304,
+silly get cb   { date: 'Sun, 16 Aug 2015 16:30:12 GMT',
+silly get cb     via: '1.1 varnish',
+silly get cb     'cache-control': 'max-age=60',
+silly get cb     etag: '"AYX6G2T6GLQV59GE4ZWLJ0SLI"',
+silly get cb     age: '0',
+silly get cb     connection: 'keep-alive',
+silly get cb     'x-served-by': 'cache-ord1722-ORD',
+silly get cb     'x-cache': 'MISS',
+silly get cb     'x-cache-hits': '0',
+silly get cb     'x-timer': 'S1439742612.244809,VS0,VE291',
+silly get cb     vary: 'Accept' } ]
+verbose etag json2mongo from cache
+verbose installOne cb mongo-restful@1.1.0
+ERR! Error: No compatible version found: corsify@'^1.0.2'
+ERR! Valid install targets:
+ERR! ["0.1.0","1.0.1","1.0.2","2.0.0","2.1.0"]
+ERR!     at installTargetsError (/usr/share/npm/lib/cache.js:488:10)
+ERR!     at /usr/share/npm/lib/cache.js:375:15
+ERR!     at saved (/usr/share/npm/lib/utils/npm-registry-client/get.js:147:7)
+ERR!     at Object.oncomplete (/usr/lib/nodejs/graceful-fs.js:230:7)
+ERR! You may report this log at:
+ERR!     <http://bugs.debian.org/npm>
+ERR! or use
+ERR!     reportbug --attach /home/jcronin/rebirtharmitage/npm-debug.log npm
+ERR! 
+ERR! System Linux 2.6.32-042stab108.8
+ERR! command "node" "/usr/bin/npm" "install" "mongo-restful"
+ERR! cwd /home/jcronin/rebirtharmitage
+ERR! node -v v0.6.12
+ERR! npm -v 1.1.4
+ERR! message No compatible version found: corsify@'^1.0.2'
+ERR! message Valid install targets:
+ERR! message ["0.1.0","1.0.1","1.0.2","2.0.0","2.1.0"]
+verbose exit [ 1, true ]
