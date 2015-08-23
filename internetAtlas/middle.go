@@ -1,37 +1,50 @@
 package main
 
 import (
-  "log"
-  "net/http"
+	"net/http"
+	"io/ioutil"
+	"io"
+	"encoding/json"
+	"strings"
+	"log"
 )
 
-func middlewareOne(next http.Handler) http.Handler {
-  return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-    log.Println("Executing middlewareOne")
-    next.ServeHTTP(w, r)
-    log.Println("Executing middlewareOne again")
-  })
-}
+func serverCall() (string){
 
-func middlewareTwo(next http.Handler) http.Handler {
-  return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-    log.Println("Executing middlewareTwo")
-    if r.URL.Path != "/" {
-      return
-    }
-    next.ServeHTTP(w, r)
-    log.Println("Executing middlewareTwo again")
-  })
-}
+	url := "http://www.broadbandmap.gov/broadbandmap/broadband/jun2014/wireless?latitude=40.7195898&longitude=-73.9998334&format=json"
 
-func final(w http.ResponseWriter, r *http.Request) {
-  log.Println("Executing finalHandler")
-  w.Write([]byte("OK"))
-}
+	req, _ := http.NewRequest("GET", url, nil)
 
-func main() {
-  finalHandler := http.HandlerFunc(final)
+	res, _ := http.DefaultClient.Do(req)
 
-  http.Handle("/", middlewareOne(middlewareTwo(finalHandler)))
-  http.ListenAndServe(":3000", nil)
+	defer res.Body.Close()
+	body, _ := ioutil.ReadAll(res.Body)
+	
+	type Message struct {
+		Status string
+		Results interface{}
+	}
+	
+	type InnerMessage struct {
+		Frm string
+	}
+	
+	n := string(body[:])
+	
+	dec := json.NewDecoder(strings.NewReader(n))
+	
+	for {
+		var m Message
+		if err := dec.Decode(&m); err == io.EOF {
+			break
+		} else if err != nil {
+			log.Fatal(err)
+		}
+		if (m.Status == "OK") {
+			parseWired(m.Results)
+		}
+	}
+	
+	return string(body)
+
 }
