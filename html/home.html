@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,9 +18,6 @@
     <link href="css/freelancer.css" rel="stylesheet">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </head>
 
 <body id="page-top" class="index">
@@ -56,6 +54,9 @@
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
+                    <li class="page-scroll">
+                        <a href="#instafeed">Instagram</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -76,8 +77,8 @@
             </div>
         </div>
     </header>
-	
-	 <!-- Portfolio Grid Section -->
+
+    <!-- Portfolio Grid Section -->
     <section class="portfolio" id="services">
         <div class="container">
             <div class="row">
@@ -92,27 +93,27 @@
                     </a>
                     <h3 class="pothead">Application Development
                     </h3>
-                    <p>Using the latest technologies and trends to design, develop and adapt software to you.</p>
+                    <p>Creating applications to achieve your vision and goals.</p>
                 </div>
                 <div class="col-lg-4 text-center portrow">
                     <a href="#portfolioModal2" class="portfolio-item" data-toggle="modal">
-                        <img src="img/jquery.png" id="img" class="img-circle" alt="">
+                        <img src="img/jquery.png" id="blur" class="img-circle" alt="">
                     </a>
-                    <h3 class="pothead">Web Development / Design
+                    <h3 class="pothead">Web Development
                     </h3>
                     <p>Creating website and online applications for Cloud based success.</p>
                 </div>
                 <div class="col-lg-4 text-center portrow">
                     <a href="#portfolioModal3" class="portfolio-item" data-toggle="modal">
-                        <img src="img/interactive.png" id="img" class="img-circle" alt="">
+                        <img src="img/interactive.png" id="dark" class="img-circle" alt="">
                     </a>
-                    <h3 class="pothead">Web Marketing
+                    <h3 class="pothead">User Interface
                     </h3>
-                    <p>Developing your brand online in social media and through your own site.</p>
+                    <p>Creating simple and meaningful experiences through UI design.</p>
                 </div>
                 <div class="col-lg-4 text-center portrow">
                     <a href="#portfolioModal4" class="portfolio-item" data-toggle="modal">
-                        <img src="img/noxia.png" id="img" class="img-circle" alt="">
+                        <img src="img/java.jpg" id="img" class="img-circle" alt="">
                     </a>
                     <h3 class="pothead">Graphic Design
                     </h3>
@@ -120,7 +121,7 @@
                 </div>
                 <div class="col-lg-4 text-center portrow">
                     <a href="#portfolioModal5" class="portfolio-item" data-toggle="modal">
-                        <img src="img/mongo.png" id="img" class="img-circle" alt="">
+                        <img src="img/mongo.png" id="blur" class="img-circle" alt="">
                     </a>
                         <h3 class="pothead">Data
                     </h3>
@@ -128,7 +129,7 @@
                 </div>
                 <div class="col-lg-4 text-center portrow">
                     <a href="#portfolioModal6" class="portfolio-item" data-toggle="modal">
-                        <img src="img/ra.png" id="img" class="img-circle" alt="">
+                        <img src="img/3d.png" id="dark" class="img-circle" alt="">
                     </a>
                         <h3 class="pothead">3D Design
                     </h3>
@@ -137,8 +138,8 @@
             </div>
         </div>
     </section>
-	
-	 <section class="success" id="staff">
+    
+    <section class="success" id="staff">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -188,37 +189,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <span class="subheaders">Contact Us</span>
+                    <h2>Contact Me</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form method="post" action="/sendmail">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" name="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" name="email" required data-validation-required-message="Please enter your email address.">
+                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" name="phone" required data-validation-required-message="Please enter your phone number.">
+                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" name="body" required data-validation-required-message="Please enter a message."></textarea>
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -234,10 +237,84 @@
             </div>
         </div>
     </section>
-	
+    
+    
+    <section>
+        <div class="container">
+            <div>
+                <div class="container">
+                    <div class="row" id="instafeed">
+                        <div class="col-lg-12 text-center portwor">
+                            <span class="subheaders">Instagram</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <script src="js/instagram.js"></script>
+                    <script type="text/javascript">
+                        var feed = new Instafeed({
+                          get: 'user',
+                          userId: 1621059736,
+                          limit:18,
+                          accessToken: '1621059736.7595eec.8318822b554a4b55899e72788d89ff20',
+                          template: '<div class="col-lg-2 col-sm-6 text-center" id=""><a href="{{link}}"/><img class="img-circle img-responsive text-center" id="blur" src="{{image}}" alt=""><h3>{{title}}<small></small></h3></div>'
+                        });
+                        feed.run();
+                    </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	
-	 <!-- Portfolio Modals -->
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>4326 Armar Dr. SE<br>Cedar Rapids, IA 52403</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Social Media</h3>
+                        <ul class="list-inline">
+                            <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"</i><img class="img-circle smi" src="./img/facebook-icon.png"/></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i><img class="img-circle smi" src="./img/tumblr-icon.png"/></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i><img class="img-circle smi" src="./img/twitter-icon.png"/></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Us</h3>
+                        <p>Design and Development Studio Rebirth Armitage Studios</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Rebirth Armitage Studios, 2015
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -250,33 +327,21 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Application Development</h2>
+                            <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/go.png" id="img" class="img-responsive img-centered img-circle" alt="">
-                            <p>Creating applications is never a small task.  You need a partner that has the adaptability to develop to your needs and not the developers ease.    Start with Rebirth Armitage Studios.  We offer development experience and flexibility to develop within your needs and design specifications.    Creating your application ontime, and to specifications.   Then what???    So often it becomes a build it and forget it.    We are here for the long haul.  Meaning updates, support and additional development are all a part of our ongoing service packages.     Contact us today to get started on your next or first application.   </p>
+                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
-                                <li>Languages:
-                                    <strong>Java SE/EE 8</strong>
-																		<strong>VB.NET </strong>
-																		<strong>C#.NET </strong>
-																		<strong>Golang </strong>
-																		<strong>Access 2007/2010/2013 </strong>
-                                </li>
-                                <li>Platforms Supported:
-                                    <strong>Windows 7/8/10 : Linux RHEL, Debian Kernels : MAC OS 10.5+</strong>
-                                </li>
-                            </ul>
-														<ul class="list-inline item-details">
-                                <li>Cost:
-                                    <strong>Custom Quoted : Average $115.00 Per/Hour</a>
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong>October 2014</a>
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong>Application Development</a>
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -287,7 +352,7 @@
             </div>
         </div>
     </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -299,32 +364,21 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Web Development / Design</h2>
+                            <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/jquery.png" id="img" class="img-responsive img-centered img-circle" alt="">
-                            <p>The creation of your website is never a trivial undertaking.   So many options and pitfalls exist for you along the way from knowing you want and need a website to having one ready online and stunning while functional (and don’t forget the mobile).   Where do you even begin?  Start here with Rebirth Armitage studios.  We work in web application and design with years of experience and an eye for design and the programming muscle to make functional websites that link into your overall branding.</p>
+                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
-                                <li>Languages:
-                                    <strong>HTML/HTML5</strong>
-																		<strong>JQuery / Javascript </strong>
-																		<strong>Golang </strong>
-																		<strong>Angular JS </strong>
-                                </li>
-                                <li>Platforms Supported:
-                                    <strong>Internet Explorer | Chrome | Firefox | Safari </strong>
-                                </li>
-                            </ul>
-														<ul class="list-inline item-details">
-                                <li>Cost:
-                                    <strong>Custom Quoted : Average $75.00 Per/Hour</a>
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong>November 2015</a>
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong>Web Development / Design</a>
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -335,7 +389,7 @@
             </div>
         </div>
     </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -347,32 +401,21 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Web Marketing</h2>
+                            <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/interactive.png" id="img" class="img-responsive img-centered img-circle" alt="">
-                            <p>Bringing your brand online is essential for any modern business.   In order to do this right requires a mix of traditional top of mind marketing skills, technical know how and wizardry and a keen insight into what's really trending and what's ironically trending.    We at Rebirth Armitage studios are up to this challenge.    Ready for the next chapter or just starting we are your marketing one stop shop.  Graphic and logo design, branding allow you avenues into traditional marketing paradigms.   While our web marketing takes all of that material to social media, your web page and to SEO for Google and the others.     Ready to get online, let us be your sherpa.</p>
+                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
-                                <li>Service List:
-                                    <strong>SEO Optimization</strong>
-																		<strong>Social Media Marketing </strong>
-																		<strong>Guerilla Marketing </strong>
-																		<strong>Branding </strong>
-                                </li>
-                                <li>SEO Platforms:
-                                    <strong>Google | Bing | Yahoo </strong>
-                                </li>
-                            </ul>
-														<ul class="list-inline item-details">
-                                <li>Cost:
-                                    <strong>Custom Quoted : Average $25.00 Per/Hour</a>
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong>November 2015</a>
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong>Web Marketing</a>
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -495,6 +538,24 @@
         </div>
     </div>
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-	
-	
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+
+</body>
+
+</html>

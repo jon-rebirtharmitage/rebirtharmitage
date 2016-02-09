@@ -10,27 +10,7 @@
 
   <div ng-controller="MyController" >
     <button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
-    <br/>
-    Data from server: {{data}}
   </div>
-
-  <script>
-    angular.module("myapp", [])
-        .controller("MyController", function($scope, $http) {
-            $scope.myData = {};
-            $scope.myData.doClick = function(item, event) {
-
-                var responsePromise = $http.jsonp('http://www.broadbandmap.gov/broadbandmap/provider/jun2014/stats/nation/population/140030/similar/downloadspeed?callback=JSON_CALLBACK');
-
-                responsePromise.success(function(data) {
-                    alert("Success");
-                });
-                responsePromise.error(function(data) {
-                    alert("AJAX failed!");
-                });
-            }
-        });
-  </script>
 
 </body>
 

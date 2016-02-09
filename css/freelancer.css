@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
 
 body {
     overflow-x: hidden;
@@ -13,10 +13,12 @@ body {
 
 p {
     font-size: 20px;
+	font-family: 'PT Sans Narrow', sans-serif;
 }
 
 p.small {
     font-size: 16px;
+	font-family: 'PT Sans Narrow', sans-serif;
 }
 
 @font-face {
@@ -88,6 +90,11 @@ header .intro-text .name {
 
 .portwor{
     margin-bottom:20px;
+}
+
+strong{
+	font-size:12pt;
+	font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .sh1{
@@ -404,6 +411,7 @@ section.success a.active {
 .floating-label-form-group input,
 .floating-label-form-group textarea {
     z-index: 1;
+	font-family: 'PT Sans Narrow', sans-serif;
     position: relative;
     padding-right: 0;
     padding-left: 0;
@@ -590,7 +598,7 @@ footer .footer-below {
       rgba(0, 0, 0, 0.6)
     ),
     /* bottom, image */
-    url('../img/me.png')repeat center center scroll;
+    url('https://lh3.googleusercontent.com/luaLSSxmQzlchlxQzs2dETu77H7EzNW1WV5Tdp74ApAgLKUwS7oevEWBoc26bn1n8cZGHNyR6yWvwhF7WaRCCMwfDT3oTWU17c1uqajSb6sT47TaxfqRVuTdTjEgsCnRUPUZfhgnSbkOcUhl8RQ8-Gukt9Ah6yXwCBK8areozFO9UopyOUuJG7jNoxP-FS0DadPvWyAxzrJvYodptQX4uHL7AlgmLr4g4--9-seMkUGbeDs6MyCPFIjvnf0G1MrnFIgDGAQz55SMe2ryXfhl_ouPlASR2b-Lx4z1TxF8Jx-9S9lRfsfQDFKO_2J9IiWN4SYds4ascdp6xcSXjnorqMUH5kwh-oafmp7WvmPnTwSPNrRNfLHywB1Wam8oDEAH-ifZ7QQuAoojhC3-On8O_YLV6ISfFAArzMOvsohv_VwOuRnhFQjFf4VgDZARnhzvo1ARIz0jhli6S8Z98JMm9o_9VIqMz1jVujRRpBA1p-Nhw4elv8mrMSMebbww2eBfZc2bXhROr9Evs2esaf9ieNQoh7fL7N_eRYB931teQog=w1175-h881-no')repeat center center scroll;
     text-align: center;
     background-attachment:fixed;
     padding: -250px;
