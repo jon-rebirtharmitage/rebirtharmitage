@@ -58,8 +58,14 @@ func loadPage(title string) (*Page, error){
 
 func index(w http.ResponseWriter, r *http.Request) {
 	p, _ := loadPage("Test")
-    renderTemplate(w, "index", p)
+  renderTemplate(w, "index", p)
 }
+
+func indexNew(w http.ResponseWriter, r *http.Request) {
+	p, _ := loadPage("Test")
+  renderTemplate(w, "./html/index", p)
+}
+
 
 func email(response http.ResponseWriter, request *http.Request) {
 	name := request.FormValue("name")
@@ -102,6 +108,7 @@ var s = router.Host("www.rebirtharmitage.com").Subrouter()
 
 func main() {
 	s.HandleFunc("/", index)
+	s.HandleFunc("/new", indexNew)
 	s.HandleFunc("/sendmail", email).Methods("POST")
 	
 	//This Handles all the static file calls such as css/file.css etc.
