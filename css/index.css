@@ -3,6 +3,12 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+@font-face {
+  font-family: 'Aileons';
+  src: url('../fonts/Ailerons.ttf'); /* IE9 Compat Modes */
+  src: url('../fonts/Ailerons.woff'); /* IE9 Compat Modes */
+  src: url('../fonts/Ailerons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+}
 
 body {
     margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
@@ -17,18 +23,36 @@ body {
     -o-background-size: cover;
 }
 
-.image-bg-fluid-height {
-	background: url('http://lorempixel.com/g/1920/500/') no-repeat center center scroll;
-    padding: 100px 0;
+.image-bg-fluid-height {background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(255, 255, 255, 0.6), 
+      rgba(255, 255, 255, 0.6)
+    ),
+	url('/img/bird.png') no-repeat center center scroll;
+	padding: 100px 0;
+	background-attachment:fixed;
 }
 
-.image-bg-fixed-height {
-	background: url('http://lorempixel.com/g/1920/500/') no-repeat center center scroll;
-    height: 450px;
+.image-bg-fixed-height-one {
+	background: url('http://4walled.cc/src/2e/2e1e9cd130a62e3c08d11c767ffc0b4f.jpg') no-repeat center center scroll;
+  height: 450px;
+	background-attachment:fixed;
+}
+
+.image-bg-fixed-height-two {
+	background: url('http://4walled.cc/src/b7/b723645d40bc83af75b2838c470d7a5a.jpg') no-repeat center center scroll;
+  height: 450px;
+	background-attachment:fixed;
 }
 
 .img-center {
 	margin: 0 auto;
+}
+
+.img-resize {
+	max-height: 250px;
+	max-width: 250px;
 }
 
 section {
@@ -50,6 +74,36 @@ section {
 
 footer {
     margin: 50px 0;
+}
+
+.service-item {
+	background-color: rgba(40, 30, 45, 1);
+	width: 22.5%;
+}
+
+.service-item-h2 {
+	font-size: 1.5 em;
+	color: white;
+	text-align: center;
+}
+
+.service-item-p {
+	font-size: .5 em;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+.service-item-img {
+	max-height: 400px;
+	width:100%;
+	margin:0;
+}
+
+.border {
+	margin: 10px;
+	border: 20px;
+	padding: 0px;
 }
 
 @media(max-width:768px) {

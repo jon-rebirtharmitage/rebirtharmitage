@@ -11,6 +11,8 @@ func HandleIt(w http.ResponseWriter, r *http.Request) {
     http.Redirect(w, r, "http://www.rebirtharmitage.com:8080", 302)
   }else if strings.Contains(r.Host, "internetatlas.co"){
     http.Redirect(w, r, "http://www.internetatlas.co:8081", 302)
+  }else if strings.Contains(r.Host, "janus"){
+    http.Redirect(w, r, "http://www.gojanus.co:8083", 302)
   }
 }
 
