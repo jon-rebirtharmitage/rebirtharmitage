@@ -62,8 +62,9 @@ func index(w http.ResponseWriter, r *http.Request) {
 }
 
 func indexNew(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	p, _ := loadPage("Test")
-  renderTemplate(w, "./html/index", p)
+  renderTemplate(w, "index_old", p)
 }
 
 

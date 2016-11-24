@@ -1,597 +1,95 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
+<html lang="en" ng-app="kitchensink">
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Jonathon Cronin">
 
-    <title>Rebirth Armitage Studios</title>
+    <title>Solar system | Fabric.js Demos</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <style>
+      pre { margin-left: 15px !important }
+    </style>
 
-        <!-- Custom CSS -->
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/move.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script src="js/modernizr.custom.70736.js"></script>
-    
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-</head>
+    <!--[if lt IE 9]>
+      <script src="../lib/excanvas.js"></script>
+    <![endif]-->
 
-<body>
+    <script src="../lib/prism.js"></script>
+    <script>
+      (function() {
+        var fabricUrl = '../lib/fabric.js';
+        if (document.location.search.indexOf('load_fabric_from=') > -1) {
+          var match = document.location.search.match(/load_fabric_from=([^&]*)/);
+          if (match && match[1]) {
+            fabricUrl = match[1];
+          }
+        }
+        document.write('<script src="' + fabricUrl + '"><\/script>');
+      })();
+    </script>
+    <script src="/js/master.js"></script>
+    <script src="/js/master.js"></script>
+    <script src="/js/jquery.js"></script>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top img-center" id="orangeit" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                <a class="navbar-brand" href="#"><img class="smallIcon" src="http://i.imgur.com/Z93Wu0O.png" alt=""></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#code">Golang</a></li>
-                            <li><a href="#code">Wordpress</a></li>
-                            <li><a href="#code">JQuery</a></li>
-                            <li><a href="#code">Angular & Node</a></li>
-                            <li><a href="#code">Python</a></li>
-                            <li><a href="#code">Ruby</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#design">User Interface</a></li>
-                            <li><a href="#design">Animation</a></li>
-                            <li><a href="#design">3D</a></li>
-                            <li><a href="#design">Interactivity</a></li>
-                            <li><a href="#design">Web Advertising</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#data">MongoDB</a></li>
-                            <li><a href="#data">SQL & MySQL</a></li>
-                            <li><a href="#data">Data Management</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#staff">Staff</a>
-                    </li>
-                    <li>
-                        <a href="#instafeed">Instagram Feed</a>
-                    </li> 
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  </head>
 
-    <!-- Full Width Image Header with Logo -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <header class="image-bg-fluid-height">
-        <img class="img-responsive img-center" src="http://i.imgur.com/Z93Wu0O.png" alt="">
-    </header>
+<canvas id="c" width="840" height="840" style="border:1px solid #aaa"></canvas>
 
-    <!-- Content Section -->
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="section-heading">Rebirth Armitage Studios</h1>
-                    <p class="lead section-lead">Creating unique, stunning and exqusite web experiences</p>
-                    <p class="section-paragraph">To create we must seek vision.     RA Studios is the small and nimble design firm that can innovate the way you use the web.    If it be a web based application for maintaining your business or a front end site to allow users to interact with your call to action.     RA Studios can make a reality of your desires and get your organization running in the 21st century.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<script id="main">(function() {
+  var canvas = this.__canvas = new fabric.Canvas('c');
+  fabric.Object.prototype.transparentCorners = false;
 
-    <!-- Fixed Height Image Aside -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
+  canvas.on('mouse:over', function(e) {
+    e.target.setFill('red');
+    canvas.renderAll();
+  });
+
+  canvas.on('mouse:out', function(e) {
+    e.target.setFill('green');
+    canvas.renderAll();
+  });
+
+  // add random objects
+  for (var i = 15; i--; ) {
+    var dim = fabric.util.getRandomInt(30, 60);
+    var klass = ['Rect', 'Triangle', 'Circle'][fabric.util.getRandomInt(0,2)];
+    var options = {
+      top: fabric.util.getRandomInt(0, 600),
+      left: fabric.util.getRandomInt(0, 600),
+      fill: 'green'
+    };
+    if (klass === 'Circle') {
+      options.radius = dim;
+    }
+    else {
+      options.width = dim;
+      options.height = dim;
+    }
+    canvas.add(new fabric[klass](options));
+  }
+})();
+</script>
+  
+<script>
+function explode(){
+  $.ajax({
+    method: "GET",
+    crossDomain: true,
+    success: function() { alert("Success"); },
+    error: function() { alert('Failed!'); },
+    url: "http://www.internetatlas.co:8081/Getit"
+  }).done(function() {
+      alert( "Data Saved: " );
+  });
+  alert("Test");
+}
+  
+setTimeout(explode, 2000);  
+</script>
 
 
-	    <!-- Fixed Height Image Aside -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. 
-    <aside class="image-bg-fixed-height-beta"></aside>-->
-	   <section>
-        <div class="container" id="">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="section-heading">Services</h1>
-                    <p class="lead section-lead">These represent our core services.</p>
-                    <p class="section-paragraph">These are the core technologies and design systems that we work with but as you can imagine we work across a range of disciplines and a range of clients and so we don't hold these services as any boundry to what we can do.   If you can dream it we will build it and if you build it...</p>
-                </div>
-            </div>
-        </div>
-	
-	   <div class="container">
-
-        <!-- Team Members Row -->
-        <div class="row" id="code">
-            <div class="col-lg-12">
-                <h2 class="page-header">Code</h2>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="img" src="img/go.png" alt="">
-                <h3>Golang
-                    <small>Go Programming</small>
-                </h3>
-                <p>Providing web server, applications and stand alone solutions!</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="img" src="img\wordpress.png" alt="">
-                <h3>Wordpress
-                    <small>Self Managed</small>
-                </h3>
-                <p>Control your content and update schedule and your online presence!</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="img" src="img\jquery.png" alt="">
-                <h3>JQuery & AJAX
-                    <small>Interactive</small>
-                </h3>
-                <p>bringing interactive and dynamic web content alive with modern solutions!</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="img" src="img\node.png" alt="">
-                <h3>Node.js
-                    <small>Expand</small>
-                </h3>
-                <p>Creating applications from webpages using extended libraries!</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="img" src="img\python.png" alt="">
-                <h3>Python
-                    <small>Modern Scripting</small>
-                </h3>
-                <p>roviding modern and effective plugins to standing applications!</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="img" src="img\ruby.png" alt="">
-                <h3>Ruby & PHP
-                    <small>Rails or Not</small>
-                </h3>
-                <p>Quick and simple online dynamic web deployment and simple upkeep.</p>
-            </div>
-        </div>
-	
-	    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Team Members Row -->
-        <div class="row">
-            <div class="col-lg-12" id="design">
-                <h2 class="page-header">Design</h2>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center" id="golang">
-                <img class="img-circle img-responsive img-center" id="blur" src="./img/ui.png" alt="">
-                <h3>User Interface
-                    <small>Experince It.</small>
-                </h3>
-                <p>Creating simple and meaningful experiences through UI design to communicating.</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="blur" src="./img/animation.jpg" alt="">
-                <h3>Animation
-                    <small>Motion</small>
-                </h3>
-                <p>Using movement to create powerful and impactful experiences that come to life.</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="blur" src="./img/3d.png" alt="">
-                <h3>3D
-                    <small>Add A Dimension</small>
-                </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="blur" src="./img/interactive.png" alt="">
-                <h3>Interactivity
-                    <small>Action & Reaction</small>
-                </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-        </div>
-	
-	        <!-- Team Members Row -->
-        <div class="row">
-            <div class="col-lg-12" id="data">
-                <h2 class="page-header">Data</h2>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center" id="golang">
-                <img class="img-circle img-responsive img-center" id="dark" src="./img/mongo.png" alt="">
-                <h3>MongoDB
-                    <small>No SQL Needed</small>
-                </h3>
-                <p>Leveraging large data systems qith quick data reference design.</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="dark" src="./img/mysql.png" alt="">
-                <h3>SQL & MySQL
-                    <small>Data Driven Power</small>
-                </h3>
-                <p>Schema based system design and maintenance for any system.</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="dark" src="./img/data.png" alt="">
-                <h3>Big Data
-                    <small>Data Design</small>
-                </h3>
-                <p>Designing the logic and systems needed to store and reference your data as you need it.</p>
-            </div>
-
-        </div>
-    
-    
-    
-    
-        <section>
-        <div class="container" id="portfolio">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="section-heading">Portfolio</h1>
-                    <p class="lead section-lead">RA Studios Achievements so far...</p>
-                    <p class="section-paragraph">This is a small sampling of the multi-disciplianry projects that RA Studios worked on this last year.</p>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-        <div class="container">
-            
-                <div class="gamma-container gamma-loading" id="gamma-container">
-
-					<ul class="gamma-gallery">
-
-						<li>
-							<div data-alt="Cronwol LLC. Logo Design" data-description="<h3>Cronwol</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por1.png"></div>
-								<noscript>
-									<img src="img/por1.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Tattoos By Nikki" data-description="<h3>Tattoos By Nikki</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por2.png"></div>
-								<noscript>
-									<img src="img/por2.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Project Noxia Coverart" data-description="<h3>Noxia Cover Artwork</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por3.png"></div>
-								<noscript>
-									<img src="img/por3.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Carpedeism.com" data-description="<h3>Carpe Deism Website</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por4.jpg"></div>
-								<noscript>
-									<img src="img/por4.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Zen Monkey Technical Group Logo" data-description="<h3>Zen Monkeys</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por5.png"></div>
-								<noscript>
-									<img src="img/por5.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-											<li>
-							<div data-alt="Cronwol LLC. Logo Design" data-description="<h3>Cronwol</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por6.jpg"></div>
-								<noscript>
-									<img src="img/por6.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Tattoos By Nikki" data-description="<h3>Tattoos By Nikki</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por7.jpg"></div>
-								<noscript>
-									<img src="img/por2.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Project Noxia Coverart" data-description="<h3>Noxia Cover Artwork</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por8.jpg"></div>
-								<noscript>
-									<img src="img/por8.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Carpedeism.com" data-description="<h3>Carpe Deism Website</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por9.jpg"></div>
-								<noscript>
-									<img src="img/por9.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Zen Monkey Technical Group Logo" data-description="<h3>Zen Monkeys</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por16.png"></div>
-								<noscript>
-									<img src="img/por16.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Cronwol LLC. Logo Design" data-description="<h3>Cronwol</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por11.jpg"></div>
-								<noscript>
-									<img src="img/por11.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Tattoos By Nikki" data-description="<h3>Tattoos By Nikki</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por12.jpg"></div>
-								<noscript>
-									<img src="img/por12.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Project Noxia Coverart" data-description="<h3>Noxia Cover Artwork</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por13.jpg"></div>
-								<noscript>
-									<img src="img/por13.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Carpedeism.com" data-description="<h3>Carpe Deism Website</h3>" data-detail="<h2>Website design using JQuery and a database for data reference to bring social media linked content to life.</h2>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por14.jpg"></div>
-								<noscript>
-									<img src="img/por14.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="Zen Monkey Technical Group Logo" data-description="<h3>Zen Monkeys</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/por15.png"></div>
-								<noscript>
-									<img src="img/por15.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-					<li>
-							<div data-alt="Photography Shoot" data-description="<h3>Cronwol</h3>" data-max-width="1800" data-max-height="1350">
-								<div data-src="img/bird.png"></div>
-								<noscript>
-									<img src="img/bird.png" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-					</ul>
-
-					<div class="gamma-overlay"></div>
-
-				</div>
-        </div>
-        <!-- Page Features -->
-        <div class="container" >
-
-
-        </div>
-        
-                <!-- Page Features -->
-        <div class="container" >
-          
-
-        </div>
-        
-        <div class="container">
-
-        </div>
-        
-        <!-- /.row -->
-        
-        <section>
-        <div class="container" id="staff">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="section-heading">Staff</h1>
-                    <p class="lead section-lead">A Growing Team.</p>
-                    <p class="section-paragraph">We are small, well lets not undersell it.  We are as small as it gets now but that only means that you get my undivided attention.</p>
-                </div>
-            </div>
-        </div>
-
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" id="" src="./img/me.png" alt="">
-                <h3>Jon Cronin
-                    <small></small>
-                </h3>
-                <p>Based in Cedar Rapids, IA.   I have 10 years in IT, Computers and studies Computer Science at the Univeristy of Iowa.    I also study fine art and graphic design at Kirkwood and Iowa.     In the end I decided to start this studio as a way to connect to clients who need the kind of creative thinker I seem to find so rarely.    Someone to bridge the technical and aesthetic gaps needed to bring innovative design and functionality to the world..</p>
-            </div>
-        </div>
-        
-        <section>
-        <div class="container">
-            <div id="instafeed">
-                <div class="container">
-                    <h1 class="section-heading">Instagram Gallery</h1>
-                    <div class="row">
-                    <script src="js/instagram.js"></script>
-                    <script type="text/javascript">
-                    var feed = new Instafeed({
-                      get: 'user',
-                      userId: 1621059736,
-                      limit:24,
-                      accessToken: '1621059736.7595eec.8318822b554a4b55899e72788d89ff20',
-                      template: '<div class="col-lg-2 col-sm-6 text-center" id=""><a href="{{link}}"/><img class="img-circle img-responsive img-center" id="blur" src="{{image}}" alt=""><h3>{{title}}<small></small></h3></div>'
-                    });
-                    feed.run();
-                    </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-        
-    <div class="container">
-    <div class="row">
-            <div class="col-lg-12" id="contact">
-                <h2 class="page-header">Contact Us</h2>
-            </div>
-    <div class="col-lg-12">
-            <div class="">
-                <form class="form-horizontal" method="post">
-                    <fieldset>
-                        <legend class="text-center header"></legend>
-
-                        <div class="form-group">
-                            <span class="col-md-3 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-6">
-                                <input id="fname" name="name" type="text" placeholder="Name" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <span class="col-md-3 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-                            <div class="col-md-6">
-                                <input id="email" name="email" type="text" placeholder="Your Email Address" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <span class="col-md-3 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-                            <div class="col-md-6">
-                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                            </div>
-                        </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    
-        
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Rebirth Armitage Studios 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </footer>
-
- 
- 
-
-    <!-- jQuery -->
-        <script src="js/jquery.js"></script>
-    
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script src="js/jquery.masonry.min.js"></script>
-	<script src="js/jquery.history.js"></script>
-	<script src="js/js-url.min.js"></script>
-	<script src="js/jquerypp.custom.js"></script>
-	<script src="js/gamma.js"></script>
-	
-	<script type="text/javascript">
-			
-			$(function() {
-
-				var GammaSettings = {
-						// order is important!
-						viewport : [ {
-							width : 1200,
-							columns : 5
-						}, {
-							width : 900,
-							columns : 4
-						}, {
-							width : 500,
-							columns : 3
-						}, { 
-							width : 320,
-							columns : 2
-						}, { 
-							width : 0,
-							columns : 2
-						} ]
-				};
-
-				Gamma.init( GammaSettings, fncallback );
-
-				function fncallback() {
-
-					$( '#loadmore' ).show().on( 'click', function() {
-
-						++page;
-						var newitems = items[page-1]
-						if( page <= 1 ) {
-							
-							Gamma.add( $( newitems ) );
-
-						}
-						if( page === 1 ) {
-
-							$( this ).remove();
-
-						}
-
-					} );
-
-				}
-
-			});
-
-		</script>
-
-</body>
-
+  </body>
 </html>
