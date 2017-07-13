@@ -1,95 +1,222 @@
-
 <!DOCTYPE html>
-<html lang="en" ng-app="kitchensink">
-  <head>
+<html lang="en">
+
+<head>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <title>Solar system | Fabric.js Demos</title>
+    <title>Full Slider - Start Bootstrap Template</title>
 
-    <link rel="stylesheet" href="../css/master.css">
-    <link rel="stylesheet" href="../css/prism.css">
-    <style>
-      pre { margin-left: 15px !important }
-    </style>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-      <script src="../lib/excanvas.js"></script>
-    <![endif]-->
+    <!-- Custom CSS -->
+    <link href="css/full.css" rel="stylesheet">
+    <link href="css/instagram.css" rel="stylesheet">
 
-    <script src="../lib/prism.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="smallIcon" src="http://i.imgur.com/Z93Wu0O.png" alt=""></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#services">Services</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#staff">Staff</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background: linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)),  url('./img/img-001.jpg')no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+              
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <span class="subheaders">Services</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center portrow">
+                    <a href="#portfolioModal1" class="portfolio-item" data-toggle="modal">
+                        <img src="img/go.png" id="img" class="img-circle" alt="">
+                    </a>
+                    <h3 class="pothead">Application Development
+                    </h3>
+                    <p>Using the latest technologies and trends to design, develop and adapt software to you.</p>
+                </div>
+                <div class="col-lg-4 text-center portrow">
+                    <a href="#portfolioModal2" class="portfolio-item" data-toggle="modal">
+                        <img src="img/jquery.png" id="img" class="img-circle" alt="">
+                    </a>
+                    <h3 class="pothead">Web Development / Design
+                    </h3>
+                    <p>Creating website and online applications for Cloud based success.</p>
+                </div>
+                <div class="col-lg-4 text-center portrow">
+                    <a href="#portfolioModal3" class="portfolio-item" data-toggle="modal">
+                        <img src="img/interactive.png" id="img" class="img-circle" alt="">
+                    </a>
+                    <h3 class="pothead">Web Marketing
+                    </h3>
+                    <p>Developing your brand online in social media and through your own site.</p>
+                </div>
+            </div>
+        </div>
+                  
+                </div>
+              
+                <div class="carousel-caption">
+                    <h2>Caption 1</h2>
+                    <h3>This is where the content will go for this section.</h3>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('./img/img-002.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('./img/img-003.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Full Slider by Start Bootstrap</h1>
+                <p>The background images for the slider are set directly in the HTML using inline CSS. The rest of the styles for this template are contained within the <code>full-slider.css</code>file.</p>
+            </div>
+        </div>
+      
+       <div class="container">
+            <div id="instafeed">
+                <div class="container">
+                    <h1 class="section-heading">Instagram Gallery</h1>
+                    <div class="row">
+                    <script src="./js/instagram.js"></script>
+                    <script type="text/javascript">
+                    var i = 0;
+                    var feed = new Instafeed({
+                      get: 'user',
+                      userId: 1621059736,
+                      limit:18,
+                      accessToken: '1621059736.7595eec.8318822b554a4b55899e72788d89ff20',
+                      template: '<div class="isn" id="{{id}}"><a href="{{link}}"/><img class="img-circle img-responsive img-center ov" id="blur" src="{{image}}" alt=""><h3><small class="instacaption">{{caption}}</small></h3></div>'
+                    });
+                    feed.run();
+                    </script>
+                    
+                    <script>
+                        function removeElement(ovid)
+                        {
+                            document.getElementById(ovid).style.display="none";
+                        }
+                        function resetElement(ovid)
+                        {
+                            document.getElementById(ovid).style.display="block";
+                        }
+                      </script>                 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
     <script>
-      (function() {
-        var fabricUrl = '../lib/fabric.js';
-        if (document.location.search.indexOf('load_fabric_from=') > -1) {
-          var match = document.location.search.match(/load_fabric_from=([^&]*)/);
-          if (match && match[1]) {
-            fabricUrl = match[1];
-          }
-        }
-        document.write('<script src="' + fabricUrl + '"><\/script>');
-      })();
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
     </script>
-    <script src="/js/master.js"></script>
-    <script src="/js/master.js"></script>
-    <script src="/js/jquery.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
-  </head>
+</body>
 
-<canvas id="c" width="840" height="840" style="border:1px solid #aaa"></canvas>
-
-<script id="main">(function() {
-  var canvas = this.__canvas = new fabric.Canvas('c');
-  fabric.Object.prototype.transparentCorners = false;
-
-  canvas.on('mouse:over', function(e) {
-    e.target.setFill('red');
-    canvas.renderAll();
-  });
-
-  canvas.on('mouse:out', function(e) {
-    e.target.setFill('green');
-    canvas.renderAll();
-  });
-
-  // add random objects
-  for (var i = 15; i--; ) {
-    var dim = fabric.util.getRandomInt(30, 60);
-    var klass = ['Rect', 'Triangle', 'Circle'][fabric.util.getRandomInt(0,2)];
-    var options = {
-      top: fabric.util.getRandomInt(0, 600),
-      left: fabric.util.getRandomInt(0, 600),
-      fill: 'green'
-    };
-    if (klass === 'Circle') {
-      options.radius = dim;
-    }
-    else {
-      options.width = dim;
-      options.height = dim;
-    }
-    canvas.add(new fabric[klass](options));
-  }
-})();
-</script>
-  
-<script>
-function explode(){
-  $.ajax({
-    method: "GET",
-    crossDomain: true,
-    success: function() { alert("Success"); },
-    error: function() { alert('Failed!'); },
-    url: "http://www.internetatlas.co:8081/Getit"
-  }).done(function() {
-      alert( "Data Saved: " );
-  });
-  alert("Test");
-}
-  
-setTimeout(explode, 2000);  
-</script>
-
-
-  </body>
 </html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Secu
