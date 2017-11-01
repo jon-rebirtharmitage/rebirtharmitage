@@ -5,18 +5,15 @@
  */
 
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 body {
     overflow-x: hidden;
 }
 
-p {
-  font-size: 1em;
-}
-
 p.small {
-  font-size: 16px;
-	font-family: 'PT Sans Narrow', sans-serif;
+  font-size: .75em;
+	font-family: font-family: 'Inconsolata', monospace;
 }
 
 @font-face {
@@ -27,7 +24,7 @@ p.small {
 }
 
 .font_ptsans{
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: font-family: 'Inconsolata', monospace;
 }
 
 .font_aileons{
@@ -35,7 +32,7 @@ p.small {
 }
 
 .color_primary1{
-	color:#ffdd19;
+	color:#D58107;
 }
 
 .color_primary2{
@@ -86,7 +83,7 @@ h3{
 }
 h4{
 		font-weight: 100;
-    font-size:4em;
+    font-size:2.25em;
 }
 h5 {
     font-weight: 100;
@@ -94,12 +91,21 @@ h5 {
 }
 h6 {
     font-weight: 75;
-    font-size:1.5em;
+    font-size:1em;
 }
 
 
 .img-centered {
     margin: 0 auto;
+}
+
+.center_logo{
+	height:150px;
+	width:150px;
+}
+
+.color_black{
+	color:black;
 }
 
 header {
@@ -124,7 +130,7 @@ header .intro-text .name {
 }
 
 .top_margin_reduce{
-	margin-top: -25px;
+	margin-top: -15px;
 }
 
 .top_margin_increase{
@@ -139,6 +145,13 @@ header .intro-text .name {
 	margin-bottom: 25px;
 }
 
+.bottom_margin_major_increase{
+	margin-bottom: 75px;
+}
+
+.p_reg{
+	font-size: 1.25em;
+}
 
 strong{
 	font-size:12pt;
@@ -195,14 +208,42 @@ strong{
     .headerbg{background:
     /* top, transparent black, faked with gradient */ 
     linear-gradient(
-      rgba(0, 0, 0, 0.6), 
-      rgba(0, 125, 255, 0.6)
+      rgba(255, 255, 255, 0.6), 
+      rgba(255, 255, 255, 0.9)
     ),
     /* bottom, image */
-    url('../img/bg-1.jpg')repeat center center scroll;
+    url('../img/bg-6.jpg')repeat center center scroll;
     text-align: center;
-    background-attachment:fixed;
-    height: 500px;
+    background-attachment:fixed;c
+    height: 600px;
+    width:100%;
+		}
+	  
+		.headerbg-2{background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(255, 255, 255, 0.6), 
+      rgba(255, 255, 255, 0.9)
+    ),
+    /* bottom, image */
+    url('../img/bg-7.jpg')repeat center center scroll;
+    text-align: center;
+    background-attachment:fixed;c
+    height: 600px;
+    width:100%;
+		}
+	
+			.headerbg-3{background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(255, 255, 255, 0.6), 
+      rgba(255, 255, 255, 0.9)
+    ),
+    /* bottom, image */
+    url('../img/bg-8.jpg')repeat center center scroll;
+    text-align: center;
+    background-attachment:fixed;c
+    height: 600px;
     width:100%;
 		}
 	
@@ -309,7 +350,7 @@ section.success a.active {
     font-family:Aileons;
     position: relative;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -592,10 +633,6 @@ footer .footer-below {
     max-height:65px;
     margin:-25px;
 }
-
-
-
-
 
 .right-navbar {
 	font-size: 3em;
